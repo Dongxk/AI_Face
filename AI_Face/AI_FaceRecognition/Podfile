@@ -1,0 +1,9 @@
+platform :ios, '8.0'
+
+target 'AI_FaceRecognition' do
+
+    pod 'TZImagePickerController'
+
+	
+end
+

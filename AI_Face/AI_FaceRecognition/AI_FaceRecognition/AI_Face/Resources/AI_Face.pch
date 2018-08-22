@@ -1,0 +1,34 @@
+//
+//  AI_Face.pch
+//  AI_FaceRecognition
+//
+//  Created by 晓坤 on 2018/8/22.
+//  Copyright © 2018年 xiao_kun. All rights reserved.
+//
+
+#ifndef AI_Face_pch
+#define AI_Face_pch
+
+
+#define KDevice_Is_iPhoneX ([UIScreen instancesRespondToSelector:@selector(currentMode)] ? CGSizeEqualToSize(CGSizeMake(1125,2436), [[UIScreen mainScreen] currentMode].size) : NO)
+
+
+#define WeakSelf(type)   __weak   typeof(type) weak##type = type;
+#define StrongSelf(type) __strong typeof(type) type = weak##type;
+
+
+#define ScreenSizeWidth   [UIScreen mainScreen].bounds.size.width
+#define ScreenSizeHeight  [UIScreen mainScreen].bounds.size.height
+
+#define StatusBarHeight         (KDevice_Is_iPhoneX ? 20+24.f : 20.f)
+#define NavBarHeight            (KDevice_Is_iPhoneX ? 64+24.f   : 64.f)
+#define TabBarHeight            (KDevice_Is_iPhoneX ? 49+34.f   : 49.f)
+
+
+#define LoginDocumentPath [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES).lastObject stringByAppendingPathComponent:@"login.plist"]
+
+#define KeyWindow [UIApplication sharedApplication].keyWindow
+#define KeyWindowRootVC      KeyWindow.rootViewController
+
+
+#endif /* AI_Face_pch */
